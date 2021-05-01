@@ -22,9 +22,15 @@
         <a class="logo " href="./index.html"><span class="l1">Web</span><span class="l2">Studio</span></a>
         <nav class="">
           <ul class="list menu">
-            <li class="item"><a class="nav select" href="./index.html">Студия</a></li>
-            <li class="item"><a class="nav" href="./portfolio.html">Портфолио</a></li>
-            <li class="item"><a class="nav" href="">Контакты</a></li>
+            <li class="item nav-menu-item">
+              <a class="nav select" href="./index.html">Студия</a>
+            </li>
+            <li class="item nav-menu-item">
+              <a class="nav" href="./portfolio.html">Портфолио</a>
+            </li>
+            <li class="item nav-menu-item">
+              <a class="nav" href="">Контакты</a>
+            </li>
           </ul>
         </nav>
         <ul class="list contacts-list">
@@ -61,7 +67,7 @@
         <h1 class="ind-title ">
           Эффективные решения<br /><span class="white-space">для вашего бизнеса</span>
         </h1>
-        <button class="ind-btn" type="button">Заказать услугу</button>
+        <button class="ind-btn" type="button" data-modal-open>Заказать услугу</button>
       </div>
     </section>
 
@@ -131,16 +137,26 @@
         <h2 class="ind-headline">Чем мы занимаемся</h2>
 
         <ul class="list we-do-list">
+
           <li class="item ">
-            <img src="./images/we-do/img-01.jpg" alt="Планирование" />
+            <img src="./images/we-do/img-01.jpg" alt="Десктопные приложения" />
+            <div class="we-do-overlay ">
+              <p class="we-do-text">Десктопные приложения</p>
+            </div>
           </li>
 
           <li class="item ">
-            <img src="./images/we-do/img-02.jpg" alt="Дизайн" />
+            <img src="./images/we-do/img-02.jpg" alt="Мобильные приложения" />
+            <div class="we-do-overlay">
+              <p class="we-do-text ">Мобильные приложения</p>
+            </div>
           </li>
 
           <li class="item ">
-            <img src="./images/we-do/img-03.jpg" alt="Цвет" />
+            <img src="./images/we-do/img-03.jpg" alt="Дизайнерские решения" />
+            <div class="we-do-overlay">
+              <p class="we-do-text ">Дизайнерские решения</p>
+            </div>
           </li>
         </ul>
 
@@ -421,13 +437,21 @@
               </a>
             </li>
           </ul>
-
         </div>
       </div>
     </div>
-
+    <div class="modal-window is-hidden" data-modal>
+      <div class="modal">
+        <button data-modal-close class="btn-modal-close">
+          <svg class="modal-svg">
+            <use href="./images/iconz.svg#close"></use>
+          </svg>
+        </button>
+        <p class="modal-text"></p>
+      </div>
+    </div>
   </footer>
-
+  <script src="./js/modal.js"></script>
 </body>
 
 </html>
