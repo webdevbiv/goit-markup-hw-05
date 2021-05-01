@@ -30,6 +30,10 @@
 
   --font-main: "Roboto", Arial, Helvetica, sans-serif;
   --font-logo: "Raleway", Arial, Helvetica, sans-serif;
+
+  /* animation */
+  --btn-sh-duration: 250ms;
+  --btn-sh-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -116,6 +120,10 @@ img {
   letter-spacing: 0.02em;
   color: inherit;
   text-decoration: none;
+
+  transition-property: color;
+  transition-duration: var(--btn-sh-duration);
+  transition-timing-function: var(--btn-sh-function);
 }
 
 .nav:active {
@@ -140,6 +148,9 @@ img {
   color: var(--text-alt-cl);
   text-decoration: none;
   align-items: center;
+
+  transition: color var(--btn-sh-duration) var(--btn-sh-function),
+    fill var(--btn-sh-duration) var(--btn-sh-function);
 }
 
 .top-icons-svg {
@@ -147,7 +158,23 @@ img {
   fill: var(--text-alt-cl);
 }
 
+.top-contacts-list {
+  display: inline-flex;
+  align-items: center;
+}
+
 .links-top:hover,
+.links-top:focus {
+  color: var(--text-accent-cl);
+  fill: var(--text-accent-cl);
+}
+
+.links-top:hover .top-icons-svg,
+.links-top:focus .top-icons-svg {
+  fill: var(--text-accent-cl);
+}
+
+/* .links-top:hover,
 .links-top:focus {
   color: var(--text-accent-cl);
 }
@@ -155,12 +182,12 @@ img {
 .links-top:hover .envelope,
 .links-top:focus .envelope {
   fill: var(--text-accent-cl);
-}
+} */
 
-.icon:hover,
+/* .icon:hover,
 .icon:focus {
   fill: var(--text-accent-cl);
-}
+} */
 
 .white-bg {
   background-color: var(--bg-white-cl);
@@ -263,6 +290,11 @@ img {
   background-color: var(--bg-light-cl);
   cursor: pointer;
   padding: 6px 22px;
+
+  transition: background-color var(--btn-sh-duration) var(--btn-sh-function),
+    color var(--btn-sh-duration) var(--btn-sh-function),
+    box-shadow var(--btn-sh-duration) var(--btn-sh-function),
+    border-radius var(--btn-sh-duration) var(--btn-sh-function);
 }
 
 .por-btn:hover,
@@ -292,6 +324,7 @@ img {
 .por-links {
   text-decoration: none;
   color: inherit;
+  transition: box-shadow var(--btn-sh-duration) var(--btn-sh-function);
 }
 
 .por-links:hover,
@@ -311,6 +344,8 @@ img {
   line-height: 1.71;
   color: var(--text-links-cl);
   text-decoration: none;
+
+  transition: color var(--btn-sh-duration) var(--btn-sh-function);
 }
 
 .address:hover,
@@ -324,14 +359,14 @@ img {
   line-height: 1.71;
   color: var(--text-bot-links-cl);
   text-decoration: none;
+
+  transition: color var(--btn-sh-duration) var(--btn-sh-function);
 }
 
 .links-bot:hover,
 .links-bot:focus {
   color: var(--text-accent-cl);
 }
-
-/* hw-03 */
 
 .container {
   width: 1200px;
@@ -487,6 +522,8 @@ img {
   overflow: hidden;
   padding-bottom: 16px;
   padding-top: 16px;
+  transition: border var(--btn-sh-duration) var(--btn-sh-function),
+    fill var(--btn-sh-duration) var(--btn-sh-function);
 }
 
 .clients-list {
@@ -533,6 +570,9 @@ img {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+
+  transition: background var(--btn-sh-duration) var(--btn-sh-function),
+    fill var(--btn-sh-duration) var(--btn-sh-function);
 }
 
 .sm-item:not(:last-child) {
@@ -603,6 +643,8 @@ img {
   height: 44px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
+
+  transition: background-color var(--btn-sh-duration) var(--btn-sh-function);
 }
 
 .sm-bot-links:hover,
