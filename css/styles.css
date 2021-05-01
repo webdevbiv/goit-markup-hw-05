@@ -128,7 +128,7 @@ img {
   letter-spacing: 0.02em;
   color: inherit;
   text-decoration: none;
-  padding: 32px 0;
+  position: relative;
 
   transition-property: color;
   transition-duration: var(--btn-sh-duration);
@@ -159,12 +159,12 @@ img {
   height: 4px;
   border-radius: 2px;
   background-color: var(--text-accent-cl);
-  top: 46px;
-  left: 0%;
+  bottom: -1px;
+  /* left: 0%; */
 }
 
 .links-top {
-  display: flex;
+  display: inline-flex;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -172,19 +172,19 @@ img {
   color: var(--text-alt-cl);
   text-decoration: none;
   align-items: center;
+  /* padding: 32px 0; */
 
-  transition: color var(--btn-sh-duration) var(--btn-sh-function),
-    fill var(--btn-sh-duration) var(--btn-sh-function);
+  transition: color var(--btn-sh-duration) var(--btn-sh-function);
+}
+
+.contacts-list a {
+  height: 80px;
 }
 
 .top-icons-svg {
   margin-right: 10px;
   fill: var(--text-alt-cl);
-}
-
-.top-contacts-list {
-  display: inline-flex;
-  align-items: center;
+  transition: fill var(--btn-sh-duration) var(--btn-sh-function);
 }
 
 .links-top:hover,
@@ -437,19 +437,23 @@ img {
 }
 
 .page-header {
-  padding-top: 24px;
-  padding-bottom: 25px;
+  /* padding-top: 24px;
+  padding-bottom: 25px; */
   border-bottom: 1px solid var(--border-header-box);
 }
 
 .menu {
-  display: flex;
-  align-items: stretch;
+  display: inline-flex;
 }
 
 .menu .item:not(:last-child) {
-  align-items: stretch;
   margin-right: 50px;
+}
+
+.menu a {
+  display: inline-flex;
+  align-items: center;
+  height: 80px;
 }
 
 .contacts-list {
@@ -589,8 +593,7 @@ img {
   overflow: hidden;
   padding-bottom: 16px;
   padding-top: 16px;
-  transition: border var(--btn-sh-duration) var(--btn-sh-function),
-    fill var(--btn-sh-duration) var(--btn-sh-function);
+  transition: border var(--btn-sh-duration) var(--btn-sh-function);
 }
 
 .clients-list {
@@ -606,6 +609,7 @@ img {
 
 .clients-svg {
   fill: #afb1b8;
+  transition: fill var(--btn-sh-duration) var(--btn-sh-function);
 }
 
 .clients-links:focus,
@@ -628,6 +632,8 @@ img {
   width: 20px;
   height: 20px;
   fill: var(--icons-cl);
+
+  transition: fill var(--btn-sh-duration) var(--btn-sh-function);
 }
 
 .sm-links {
@@ -638,8 +644,7 @@ img {
   height: 44px;
   border-radius: 50%;
 
-  transition: background var(--btn-sh-duration) var(--btn-sh-function),
-    fill var(--btn-sh-duration) var(--btn-sh-function);
+  transition: background var(--btn-sh-duration) var(--btn-sh-function);
 }
 
 .sm-item:not(:last-child) {
@@ -655,6 +660,7 @@ img {
 .sm-links:focus .sm-icons-svg {
   fill: var(--text-links-cl);
 }
+
 /* .team-list .item .item-img {
   margin-bottom: 30px;
 } */
