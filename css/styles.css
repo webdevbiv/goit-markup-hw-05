@@ -354,6 +354,7 @@ img {
 .img-des {
   position: relative;
   overflow: hidden;
+  animation: cssAnimation 0s ease-in 3s forwards;
 }
 
 .por-links:hover,
