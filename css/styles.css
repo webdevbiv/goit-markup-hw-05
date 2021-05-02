@@ -353,6 +353,7 @@ img {
 
 .img-des {
   position: relative;
+  overflow: hidden;
 }
 
 .por-links:hover,
@@ -364,6 +365,7 @@ img {
 .por-links:hover .des-overlay-text,
 .por-links:focus .des-overlay-text {
   opacity: 1;
+  transform: translateY(0);
 }
 
 .des-overlay-text {
@@ -378,7 +380,9 @@ img {
   color: var(--text-links-cl);
   background-color: var(--por-des-bg);
   letter-spacing: 0.03em;
-  transition: opacity var(--btn-sh-duration) var(--btn-sh-function);
+  transition: opacity var(--btn-sh-duration) var(--btn-sh-function),
+    transform var(--btn-sh-duration) var(--btn-sh-function);
+  transform: translateY(75%);
 }
 
 /* .shadow:hover,
