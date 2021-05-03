@@ -774,6 +774,7 @@ img {
   height: 100%;
   background: var(--modal-win-bg);
   opacity: 1;
+
   transition: opacity 500ms var(--btn-sh-function);
 }
 
@@ -781,10 +782,15 @@ img {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+
+  transition: opacity 500ms var(--btn-sh-function),
+    visibility 500ms var(--btn-sh-function);
 }
 
 .modal-window.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.5);
+
+  transition: transform 500ms var(--btn-sh-function);
 }
 
 .modal {
@@ -794,10 +800,12 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  transform: translate(-50%, -50%) scale(1);
 
-  transition: transform 600ms;
+  transition: transform 500ms var(--btn-sh-function);
 }
 
 .btn-modal-close {
